@@ -1,0 +1,40 @@
+* {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+  
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: white;
+
+  &:hover {
+    color: blue;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}

@@ -1,0 +1,85 @@
+@import '../../../App.scss';
+
+.card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+
+  @include tab {
+    margin: 20px 0;
+  }
+  @include mobile {
+    margin: 20px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      img {
+        object-fit: cover;
+        height: 250px;
+        width: 350px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+        @include mobile {
+          height: 150px;
+          width: 250px;
+        }
+      }
+
+      span {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background-color: white;
+        color: greenyellow;
+        padding: 3px 5px;
+        z-index: 3;
+        font-weight: 500;
+        font-size: 20px;
+      }
+      .discount {
+        position: absolute;
+        font-size: 20px;
+        top: 10px;
+        color: pink;
+      }
+    }
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .prices {
+    display: flex;
+    gap: 0 10px;
+    font-size: 20px;
+
+    .old-price {
+      font-weight: 500;
+      text-decoration: line-through;
+      .new-price {
+        font-size: 20px;
+      }
+    }
+  }
+}

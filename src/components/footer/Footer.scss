@@ -1,0 +1,165 @@
+@import '../../App.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0;
+  overflow: hidden;
+  padding: 0 200px;
+  @include tab {
+    padding: 0 20px;
+  }
+
+  @include mobile {
+    padding: 0 20px;
+  }
+  .upper-section {
+    display: flex;
+    gap: 40px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+    .item {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 5px 0;
+
+      @include mobile {
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 25px;
+        color: gray;
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+
+      span {
+        font-size: 18px;
+        color: gray;
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #e9ecef;
+
+    @include mobile {
+      gap: 0 30px;
+      flex-direction: column;
+    }
+
+    .credit {
+      display: flex;
+      color: #6c757d;
+      font-size: 14px;
+
+      @include mobile {
+        flex-direction: column;
+        font-size: 12px;
+      }
+      .credit-text-icon {
+        display: flex;
+      }
+
+      @include mobile {
+        justify-content: center;
+        align-items: center;
+      }
+      p {
+        padding: 0 10px;
+      }
+    }
+
+    .source-code {
+      display: flex;
+      span {
+        color: gray;
+        font-size: 14px;
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+      a {
+        padding: 0 20px;
+        color: #29adf4;
+      }
+      .icon {
+        font-size: 14px;
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+// Contact SCSS:
+.contact {
+  background-color: rgb(195, 192, 255);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  .contact-wrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tab {
+      width: 100%;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .contact-mail {
+      input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+
+        @include mobile {
+          padding: 2px;
+        }
+      }
+      input:focus {
+        outline: none;
+        border: none;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 14px;
+        color: white;
+        background: orchid;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        cursor: pointer;
+
+        @include mobile {
+          border: 0;
+          padding: 2px;
+        }
+      }
+    }
+    .contact-icons {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}

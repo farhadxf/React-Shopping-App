@@ -1,0 +1,239 @@
+@import '../../App.scss';
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  overflow: hidden;
+  @include mobile {
+    height: 50px;
+  }
+  .nav-left {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 20px;
+
+    @include tab {
+      margin: 0;
+    }
+    @include mobile {
+      margin-left: 45px;
+    }
+
+    .left-icon {
+      display: flex;
+      margin-left: 20px;
+      display: inline;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+      }
+      a {
+        font-size: 25px;
+        font-weight: 900;
+        color: pink;
+        text-shadow: 0 5px 8px rgba(190, 60, 242, 0.195);
+        text-decoration: none;
+
+        @include mobile {
+          font-size: 15px;
+        }
+      }
+    }
+    .center-link {
+      text-decoration: none;
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          font-size: 30px;
+          color: lightgreen;
+
+          @include tab {
+            font-size: 20px;
+          }
+
+          @include mobile {
+            font-size: 15px;
+          }
+        }
+
+        .search-icon {
+          font-size: 50px;
+          margin: 0;
+          color: lightcoral;
+
+          @include mobile {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+
+    .center-icon {
+      position: relative;
+      cursor: pointer;
+      span {
+        position: absolute;
+        text-align: center;
+        font-size: 25px;
+        color: white;
+        top: 0;
+        right: -25px;
+        background-color: pink;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+    .navbar-cart-items {
+      margin-left: 0;
+      @include mobile {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        z-index: 20;
+      }
+    }
+  }
+
+  .nav-wrapper {
+    .nav-items {
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile {
+        flex-direction: column;
+        width: 100%;
+        gap: 50px;
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        margin-right: 20px;
+        margin-top: 10px;
+
+        @include tab {
+          gap: 20px;
+        }
+
+        @include mobile {
+          gap: 50px;
+          flex-direction: column;
+          margin: 0;
+        }
+
+        .item-sign-in {
+          display: flex;
+          cursor: pointer;
+          font-size: 20px;
+        }
+      }
+
+      a {
+        font-size: 20px;
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    .menu-bar {
+      display: none;
+
+      @include mobile {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-size: 0px;
+        z-index: 200;
+        padding: 0;
+        .menu-bar-icon {
+          font-size: 30px;
+        }
+        button {
+          border: none;
+          padding: 0;
+          margin: 0;
+          background: none;
+          color: inherit;
+        }
+      }
+    }
+
+    @include mobile {
+      .navbar {
+        display: none;
+      }
+
+      .mobile-navbar {
+        overflow: hidden;
+        background: white;
+        overflow: hidden;
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 30px;
+        position: absolute;
+        max-height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        list-style: none;
+        .nav-items {
+          margin: 40px;
+        }
+      }
+    }
+  }
+}
+
+// cart container scss
+.cart-container {
+  .cart {
+    max-height: 100vh;
+    overflow-y: auto;
+    z-index: 30;
+
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: lightseagreen;
+    padding: 0 70px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    @include mobile {
+      width: 100vw;
+      right: -20px;
+      top: 50px;
+    }
+
+    .cart-title {
+      font-size: 30px;
+    }
+    .cart-total {
+      font-size: 20px;
+    }
+    .cart-buy-btn {
+      font-size: 20px;
+    }
+    .cart-no-item-text {
+      font-size: 20px;
+    }
+    .cart-close-btn {
+      margin: 10px 0;
+      font-size: 20px;
+      border: none;
+    }
+  }
+}

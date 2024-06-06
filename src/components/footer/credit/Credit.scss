@@ -1,0 +1,47 @@
+@import '../../../App.scss';
+
+.credit-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e9ecef;
+
+  .credit {
+    display: flex;
+    color: gray;
+    font-size: 12px;
+    padding: 0 5px;
+    @include mobile {
+      font-size: 10px;
+    }
+    a {
+      padding: 0 15px;
+      color: grey;
+      .icon {
+        font-size: 15px;
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .source-code {
+    display: flex;
+    color: gray;
+    font-size: 12px;
+    @include mobile {
+      font-size: 10px;
+    }
+    a {
+      padding: 0 15px;
+      color: grey;
+      .icon {
+        font-size: 15px;
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import '../../App.scss';
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.slider {
+  overflow: hidden;
+  .slider-img {
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1.5s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    @include tab {
+      height: 50vh;
+    }
+
+    @include mobile {
+      height: 40vh;
+    }
+
+    h1 {
+      font-size: 100px;
+      color: gold;
+      text-align: center;
+      font-family: 'indie Flower';
+
+      @include mobile {
+        font-size: 60px;
+      }
+    }
+  }
+
+  .sliders {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 40px;
+
+    .slide-number {
+      font-size: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+    .slide-number-active {
+      color: orange;
+      font-size: 50px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      @include mobile {
+        font-size: 25px;
+      }
+    }
+
+    .mui-icon {
+      font-size: 30px;
+      color: orchid;
+      cursor: pointer;
+    }
+  }
+}
