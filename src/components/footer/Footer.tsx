@@ -21,20 +21,12 @@ const Footer = () => {
 
           <div className='item'>
             <h1>About</h1>
-            <span>
-              Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt ut
-              labore etdolore.
-            </span>
+            <span>Lorem</span>
           </div>
 
           <div className='item'>
             <h1>Contact us</h1>
-            <span>
-              Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, seddo eiusmod tempor incididunt ut
-              labore
-            </span>
+            <span>Lorem</span>
           </div>
         </div>
       </div>
